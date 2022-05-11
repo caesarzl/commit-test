@@ -1,24 +1,24 @@
-'use strict';
+'use strict'
 
 module.exports = {
   types: [
-    {value: 'feat',     name: 'feat: 新功能'},
-    {value: 'fix',      name: 'fix: 修复'},
-    {value: 'docs',     name: 'docs: 文档增删改'},
-    {value: 'style',    name: 'style: 样式修改(空白、格式、缺少分号等)'},
-    {value: 'refactor', name: 'refactor: 重构(既不是增加feature，也不是修复bug)'},
-    {value: 'perf',     name: 'perf: 性能优化'},
-    {value: 'test',     name: 'test: 增加测试'},
-    {value: 'chore',    name: 'chore: 构建过程或辅助工具的变动'},
-    {value: 'revert',   name: 'revert: 回退'},
-    {value: 'build',    name: 'build: 打包'}
+    { value: 'feat', name: 'feat: 新功能' },
+    { value: 'fix', name: 'fix: 修复' },
+    { value: 'docs', name: 'docs: 文档增删改' },
+    { value: 'style', name: 'style: 样式修改(空白、格式、缺少分号等)' },
+    { value: 'refactor', name: 'refactor: 重构(既不是增加feature，也不是修复bug)' },
+    { value: 'perf', name: 'perf: 性能优化' },
+    { value: 'test', name: 'test: 增加测试' },
+    { value: 'chore', name: 'chore: 构建过程或辅助工具的变动' },
+    { value: 'revert', name: 'revert: 回退' },
+    { value: 'build', name: 'build: 打包' }
   ],
   // override the messages, defaults are as follows
   messages: {
     type: '请选择提交类型:',
     // scope: '模块:  组件功能:',
     // used if allowCustomScopes is true
-   // customScope: '请输入修改范围(可选):',
+    // customScope: '请输入修改范围(可选):',
     customScope: '修改的模块(组件):',
     subject: '请简要描述提交(必填):',
     body: '请输入详细描述(可选，待优化去除，跳过即可):',
@@ -30,4 +30,4 @@ module.exports = {
   skipQuestions: ['body', 'footer'],
   // limit subject length, commitlint默认是72
   subjectLimit: 72
-};
+}
