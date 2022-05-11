@@ -1,17 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-# 获取当前提交的 commit msg
-commit_msg=`cat $1`
-# 获取用户 email
-email=`git config user.email`
-msg_re="^(feat|fix|docs|style|refactor|perf|test|workflow|build|ci|chore|release|workflow)(\(.+\))?: .{1,100}"
-
-if [[ ! $commit_msg =~ $msg_re ]]
-then
-    echo -e "\033[31m Error: the commit message is irregular \033[m"
-	echo -e "\033[31m Error: type must be one of [feat,fix,hotfix,docs,style,refactor,test,chore] \033[m"
-    echo -e "\033[31m eg: feat(user): add the user login \033[m"
-    # 异常退出
-    exit 1
-fi
+npx --no-install commitlint --edit $1
